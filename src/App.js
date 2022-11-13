@@ -5,20 +5,17 @@ import {Layout} from "antd";
 import MainFooter from "./shared/navigation/MainFooter";
 import MainHeader from "./shared/navigation/MainHeader";
 import './App.css';
-import Auth from "./shared/user/pages/Auth";
+import Auth from "./user/pages/Auth";
 
 const {Content} = Layout;
 
 function App() {
-    return (
-        <Router>
+    return (<Router>
             <Layout>
                 <MainHeader/>
                 <Content
                     style={{
-                        padding: 80,
-                        margin: 0,
-                        minHeight: 280,
+                        padding: 80, margin: 0, minHeight: 280,
                     }}>
                     <Routes>
                         <Route path="auth" element={<Auth/>}/>
@@ -27,8 +24,7 @@ function App() {
                 </Content>
                 <MainFooter/>
             </Layout>
-        </Router>
-    );
+        </Router>);
 }
 
 export default App;
